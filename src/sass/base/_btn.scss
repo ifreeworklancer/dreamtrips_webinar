@@ -1,0 +1,28 @@
+.btn {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    z-index: 4;
+
+    &-primary {
+        //background-image: linear-gradient( 0deg, rgb(53,48,88) 0%, rgb(84,76,134) 100%);
+        @include customHover(3px, 20px, $primary);
+    }
+
+    &-light {
+        color: $primary;
+        border-color: $light;
+        background-image: linear-gradient( 0deg, rgb(169,169,169) 0%, rgb(255,255,255) 100%);
+        @include customHover(3px, 20px, $light);
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}

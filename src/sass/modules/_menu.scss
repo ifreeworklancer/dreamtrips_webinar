@@ -1,0 +1,115 @@
+.burger-menu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    height: 15px;
+    cursor: pointer;
+    z-index: 20;
+
+    &.active {
+
+        .line { 
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            &--top {
+                transform: translate(-50%, -50%) rotate(45deg);
+                width: 30px;
+                height: 2px;
+            }
+
+            &--midlle {
+                transform: translate(-50%, -50%) rotate(-45deg);
+                width: 30px;
+                height: 2px;
+            }
+
+            &--bottom {
+                width: 0;
+            }
+        }
+    }
+
+    .line {
+        width: 40px;
+        height: 1px;
+        margin-bottom: 4px;
+        background: #fff;
+        transition: .5s;
+    }
+}
+
+.menu {
+    @extend %pos;
+    position: fixed;
+    left: 50%;
+    // transform: translateX(100vw);
+    background: $primary;
+    display: none;
+
+    @media (max-width: map_get($grid-breakpoints, xl)) {
+        left: 0;
+    }
+    
+    &-nav {
+        @extend %pos;
+        padding-right: 200px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media (max-width: map_get($grid-breakpoints, md)) {
+            padding-top: 100px;
+            padding-right: 15px;
+        }
+
+        &-list {
+            margin-bottom: 0;
+
+            &-item {
+                position: relative;
+                right: 0;
+                margin-bottom: 20px;
+                padding-left: 50px;
+                transition: .5s;
+
+                a {
+                    font-size: 34px;
+                    font-weight: bold;
+                    color: #fff;
+                    transition: .5s;
+
+                    @media (max-width: map_get($grid-breakpoints, md)) {
+                        font-size: 24px;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background: $secondary;
+                    transition: .5s;
+                }
+
+                &:hover {
+                    right: -20px;
+
+                    a {
+                        color: $secondary;
+                    }
+
+                    &::before {
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

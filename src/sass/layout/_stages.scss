@@ -1,0 +1,69 @@
+#stages {
+    margin-top: -20px;
+    overflow: hidden;
+    padding: 140px 0 80px;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        padding: 50px 0;
+        margin-top: 0;
+    }
+}
+
+.stages-item {
+
+    &-list {
+        margin-bottom: 0;
+        counter-reset: list;
+
+        &-cell {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 90px;
+            min-height: 70px;
+            counter-increment: list;
+
+            &::before {
+                content: '0'counter(list);
+                position: absolute;
+                top: 25px;
+                left: 0;
+                padding: 5px 10px;
+                padding-left: 0;
+                font-size: 36px;
+                font-weight: bold;
+                color: $primary;
+                background: #fff;
+                z-index: 3;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 65px;
+                height: 65px;
+                border-radius: 5px;
+                border: 3px solid $secondary;
+            }
+        }
+    }
+}
+
+.stages-img {
+    @extend %pos;
+    @extend %img;
+    top: -120px;
+    bottom: -160px;
+    min-width: 55vw;
+    z-index: 5;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        position: relative;
+        top: 0;
+        bottom: 0;
+        margin-bottom: 30px;
+        width: 100%;
+        height: 300px;
+    }
+}

@@ -1,0 +1,124 @@
+#intro {
+    height: 100vh;
+    max-height: 1080px;
+    background: url('../images/bg/intro-bg.jpg') 50% 50% / cover no-repeat;
+    z-index: 5;
+    overflow: hidden;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        height: auto;
+        padding: 200px 0;
+    }
+
+    .play-video {
+        position: absolute;
+        left: 15px;
+        bottom: 60px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            display: none;
+        }
+    }
+}
+
+.intro-item {
+    color: #fff;
+    overflow: hidden;
+
+    &__title {
+        text-transform: uppercase;
+    }
+
+    &__description {
+        position: relative;
+        margin: 20px 0 20px;
+        max-width: 500px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
+
+.play-video {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+
+    &__icon {
+        position: relative;
+        margin-right: 15px;
+        width: 50px;
+        height: 50px;
+        background-image: linear-gradient(0deg, rgb(53, 48, 88) 0%, rgb(84, 76, 134) 100%);
+        border-radius: 50%;
+        @include customHover(15px, 50%, rgb(53, 48, 88));
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 52%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7.5px 0 7.5px 11px;
+            border-color: transparent transparent transparent #ffffff;
+        }
+    }
+}
+
+.scroll-down {
+    display: block;
+    right: 15px;
+    bottom: 60px;
+    z-index: 10;
+
+    @media (max-width: map_get($grid-breakpoints, sm)) {
+        display: none;
+    }
+
+    .icon {
+        width: 25px;
+        height: 40px;
+        border-radius: 11px;
+        border: 1px solid #fff;
+
+        &__line {
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 15px;
+            display: block;
+            background: linear-gradient(to top, rgba(#fff, 1) 0%, rgba(#fff, 0) 100%);
+            background-position: 0 -10px;
+            background-size: 100% 200%;
+            animation: scrollDown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+
+            @keyframes scrollDown {
+                0% {
+                    background-position: 0 -10px;
+                }
+
+                75% {
+                    background-position: 0 0;
+                }
+
+                100% {
+                    background-position: 0 10px;
+                }
+            }
+        }
+    }
+
+    &__text {
+        position: absolute;
+        width: 100px;
+        top: -80px;
+        left: -38px;
+        transform: rotate(-90deg);
+        font-size: 14px;
+        color: #fff;
+    }
+}

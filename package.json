@@ -1,0 +1,25 @@
+{
+  "name": "dreamtrips_webinar",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "flickity": "^2.1.2",
+    "imports-loader": "^0.8.0",
+    "jquery": "^3.3.1",
+    "laravel-mix": "^2.1.11",
+    "paroller.js": "^1.4.4",
+    "scrollreveal": "^4.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
+  }
+}

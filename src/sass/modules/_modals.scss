@@ -1,0 +1,136 @@
+.modal {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, 1000px);
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 10px 14px 2px rgba(0, 0, 0, 0.16);
+    transition: .5s;
+    z-index: 9999;
+
+    &.active {
+        transform: translate(-50%, -50%);
+    }
+
+    &-participate {
+
+        .modal-header {
+            height: 100px;
+            background: url('../images/content/modal/modal-participate-header.jpg') 50% 50% / cover no-repeat;
+        }
+    }
+
+    &-packages {
+
+        .modal-header {
+            height: 45px;
+        }
+
+        &--gold {
+
+            .modal-header {
+                background: #fbc95d;
+            }
+        }
+
+        &--platinum {
+            
+            .modal-header {
+                background: #cccccc;
+            }
+        }
+    }
+
+    &-header {
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+    }
+
+    &-body {
+
+        .warranty {
+            position: relative;
+            padding: 15px 0;
+            font-size: 14px;
+            color: #6d6d6d;
+            z-index: 2;
+
+            &::before {
+                content: '';
+                @extend %pos;
+                left: -16px;
+                right: -16px;
+                background: #ebebeb;
+                border: 1px solid #d7d7d7;
+                z-index: -2;
+            }
+        }
+
+        .btn {
+            display: flex;
+            padding: 15px;
+            width: 100%;
+        }
+
+        &__title {
+            text-transform: uppercase;
+        }
+    }
+}
+
+.modal-mask {
+    @extend %pos;
+    position: fixed;
+    background: rgba(#000, .85);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    z-index: 9998;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 4;
+
+    .line {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 2px;
+        background: #fff;
+        opacity: .7;
+        transition: .5s;
+
+        &--left {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &--right {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

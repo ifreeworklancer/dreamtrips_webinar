@@ -1,0 +1,26 @@
+@mixin customHover($width, $radius, $color) {
+    position: relative;
+    z-index: 3;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -$width;
+        left: -$width;
+        right: -$width;
+        bottom: -$width;
+        background: $color;
+        border-radius: $radius;
+        opacity: .3;
+        transform: scale(0.2);
+        transition: .5s;
+        z-index: -3;
+    }
+
+    &:hover {
+
+        &::before {
+            transform: scale(1);
+        }
+    }
+}
