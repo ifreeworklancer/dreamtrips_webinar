@@ -4,6 +4,7 @@
     <?php
     $sections = [
         'intro',
+        'advantages',
         'stages',
         'modals',
     ];

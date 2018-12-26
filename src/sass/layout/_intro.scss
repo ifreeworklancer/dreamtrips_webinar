@@ -19,6 +19,14 @@
             display: none;
         }
     }
+
+    .thanks-subtitle {
+        font-size: 24px;
+
+        @media (max-width: map_get($grid-breakpoints, sm)) {
+            font-size: 20px;
+        }
+    }
 }
 
 .intro-item {
