@@ -10,9 +10,41 @@
     <link rel="shortcut icon" href="/images/icon/favicon.png" type="image/png">
 	<link rel="stylesheet" href="/fonts/fonts.css">
 	<link rel="stylesheet" href="/dist/app.css">
+
+    <script>
+      !function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s)
+      }(window, document, 'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '589587831461778');
+      fbq('track', 'PageView');
+	  <?php if ($_SERVER['REQUEST_URI'] == '/') : ?>
+      fbq('track', 'ViewContent');
+	  <?php else : ?>
+      fbq('track', 'CompleteRegistration');
+	  <?php endif; ?>
+    </script>
 </head>
 
 <body>
+<noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=589587831461778&ev=PageView&noscript=1"/>
+</noscript>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
 	<symbol id="facebook-icon" viewBox="0 0 448 512">
