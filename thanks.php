@@ -7,7 +7,7 @@
 			<h1>Спасибо!</h1>
 			<p class="thanks-subtitle">Для того, чтобы получить напоминание об онлайн-встрече, нажмите на кнопку и перейдите в Facebook Messenger.</p>
 
-            <div class="p-3 mx-auto d-inline-block bg-white">
+            <div class="p-3 mx-auto d-inline-block bg-white-50 rounded">
                 <div class="mcwidget-embed" data-widget-id="4231426"></div>
             </div>
 
