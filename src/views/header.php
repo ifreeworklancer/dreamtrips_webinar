@@ -32,7 +32,7 @@
         'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1980833875287689');
       fbq('track', 'PageView');
-	  <?php if ($_SERVER['REQUEST_URI'] == '/') : ?>
+	  <?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') : ?>
       fbq('track', 'ViewContent');
 	  <?php else : ?>
       fbq('track', 'CompleteRegistration');
