@@ -5,7 +5,7 @@
 			<div class="col-sm-6 px-3 p-sm-0">
 				<div class="intro-item">
 					<h1 class="intro-item__title">
-                        5 эффективных трансформаций в жизни и бизнесе
+						Учим зарабатывать на путешествиях и продвигать бизнес в Facebook, Instagram и YouTube
                     </h1>
 					<div class="intro-item__description">
                         Онлайн встреча для путешественников, бизнесменов и предпринимателей
