@@ -14,10 +14,6 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div class="play-video">
-			<div class="play-video__icon"></div>
-			<div class="play-video__text">смотреть видео</div>
-		</div> -->
 		<a href="#stages" class="scroll-down position-absolute scroll-link">
 			<div class="scroll-down__text">скролл вниз</div>
 			<div class="icon mb-2 position-relative">
