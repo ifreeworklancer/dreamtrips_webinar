@@ -30,20 +30,21 @@
         s.parentNode.insertBefore(t, s)
       }(window, document, 'script',
         'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '589587831461778');
+      fbq('init', '1980833875287689');
       fbq('track', 'PageView');
-	  <?php if ($_SERVER['REQUEST_URI'] == '/') : ?>
+	  <?php if ($_SERVER['SCRIPT_NAME'] == '/index.php') : ?>
       fbq('track', 'ViewContent');
 	  <?php else : ?>
       fbq('track', 'CompleteRegistration');
 	  <?php endif; ?>
     </script>
+    <script src="//widget.manychat.com/187705778784962.js" async="async"></script>
 </head>
 
 <body>
 <noscript>
     <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=589587831461778&ev=PageView&noscript=1"/>
+         src="https://www.facebook.com/tr?id=1980833875287689&ev=PageView&noscript=1"/>
 </noscript>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
